@@ -1,7 +1,9 @@
 #!/bin/sh
 
 # Arch Installer
-# curl https://raw.githubusercontent.com/nils-trubkin/rmd/master/a.sh | sh
+# curl https://raw.githubusercontent.com/nils-trubkin/rmd/master/a.sh > a.sh
+# chmod +x a.sh
+# ./a.sh
 
 # set font and colors
 setfont ter-114n
@@ -36,7 +38,7 @@ if [[ $swap_ans = y ]] ; then
   swapon $swap_part
 fi
 
-mount $partition /mnt 
+mount $lnx_part /mnt 
 pacstrap /mnt base base-devel linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
 
