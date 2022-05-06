@@ -40,9 +40,19 @@ mount $partition /mnt
 pacstrap /mnt base base-devel linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
 
+echo "Will download a2"
+sleep 3
+
 curl https://raw.githubusercontent.com/nils-trubkin/rmd/master/a2.sh >> /mnt/a2.sh
 chmod +x /mnt/a2.sh
+
+echo "Will run a2"
+sleep 3
+
 arch-chroot /mnt ./a2.sh
+
+echo "Returned from a2, will umount and shutdown"
+sleep 3
 
 umount -l /mnt
 shutdown
