@@ -24,14 +24,20 @@ passwd
 pacman --noconfirm -S grub efibootmgr
 echo "Enter EFI partition: " 
 read efipartition
+sleep 3
 mkdir /boot/EFI
+sleep 3
 mount $efipartition /boot/EFI 
+sleep 3
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+sleep 3
 sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
+sleep 3
 
 pacman -S --noconfirm networkmanager neovim man-db wget git doas \
         ttf-dejavu zip unzip unrar p7zip gzip bzip2 feh virtualbox-guest-utils-nox
+sleep 3
 
 systemctl enable NetworkManager.service
 
