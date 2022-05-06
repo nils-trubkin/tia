@@ -41,6 +41,7 @@ fi
 mount $lnx_part /mnt 
 pacstrap /mnt base base-devel linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
+systemctl daemon-reload
 
 echo "Will download a2"
 sleep 3
