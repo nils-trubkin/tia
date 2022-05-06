@@ -45,7 +45,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 echo "Will download a2"
 sleep 3
 
-curl https://raw.githubusercontent.com/nils-trubkin/rmd/master/a2.sh >> /mnt/a2.sh
+curl https://raw.githubusercontent.com/nils-trubkin/rmd/master/a2.sh > /mnt/a2.sh
 chmod +x /mnt/a2.sh
 
 echo "Will run a2"
