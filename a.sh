@@ -40,9 +40,9 @@ mount $partition /mnt
 pacstrap /mnt base base-devel linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
 
-curl https://raw.githubusercontent.com/nils-trubkin/rmd/master/arch_install_2.sh >> /mnt/arch_install_2.sh
-chmod +x /mnt/arch_install_2.sh
-arch-chroot /mnt ./arch_install_2.sh
+curl https://raw.githubusercontent.com/nils-trubkin/rmd/master/a2.sh >> /mnt/a2.sh
+chmod +x /mnt/a2.sh
+arch-chroot /mnt ./a2.sh
 
 umount -l /mnt
 shutdown
