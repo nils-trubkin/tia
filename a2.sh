@@ -1,4 +1,4 @@
-#!/bin/s
+#!/bin/sh
 
 echo "a2 started"
 sleep 3
