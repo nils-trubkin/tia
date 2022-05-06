@@ -1,5 +1,7 @@
 #!/bin/s
 
+echo "a2 started"
+sleep 3
 clear
 pacman -Suy --noconfirm sed
 sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
@@ -39,4 +41,6 @@ useradd -m -G wheel,audio,video,optical,storage -s /bin/zsh $username
 passwd $username
 echo "permit $username as root" > /etc/doas.conf
 
+echo "a2 finished, will exit"
+sleep 3
 exit
