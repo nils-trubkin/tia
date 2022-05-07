@@ -34,7 +34,7 @@ pacman -S --noconfirm networkmanager neovim man-db wget git doas \
 
 systemctl enable NetworkManager.service
 
-echo "Enter Username: "
+echo "Enter username: "
 read username
 useradd -m -G wheel,audio,video,optical,storage -s /bin/zsh $username
 passwd $username
