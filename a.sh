@@ -54,8 +54,7 @@ sleep 3
 
 arch-chroot /mnt ./a2.sh
 
-echo "Returned from a2, will umount and shutdown"
-sleep 3
-
-#umount -l /mnt
-#shutdown
+umount -l /mnt
+umount -l /dev/sr0
+eject -F /dev/sr0
+reboot now
