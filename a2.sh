@@ -36,7 +36,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 sleep 3
 
 pacman -S --noconfirm networkmanager neovim man-db wget git doas \
-        ttf-dejavu zip unzip unrar p7zip gzip bzip2 feh virtualbox-guest-utils-nox
+        ttf-dejavu zip unzip unrar p7zip gzip bzip2 feh virtualbox-guest-utils-nox zsh
 sleep 3
 
 systemctl enable NetworkManager.service
