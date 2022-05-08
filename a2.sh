@@ -30,7 +30,7 @@ sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
 pacman -S --noconfirm networkmanager neovim man-db wget git doas \
-        ttf-dejavu zip unzip unrar p7zip gzip bzip2 feh virtualbox-guest-utils zsh sway alacritty xorg-xwayland
+        ttf-dejavu zip unzip unrar p7zip gzip bzip2 feh virtualbox-guest-utils zsh xorg-server picom kitty
 
 systemctl enable NetworkManager.service
 systemctl enable vboxservice.service
