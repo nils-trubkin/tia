@@ -31,7 +31,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 pacman -S --noconfirm networkmanager neovim man-db wget git doas \
         ttf-dejavu zip unzip unrar p7zip gzip bzip2 \
-        feh virtualbox-guest-utils zsh xorg picom kitty xmonad xmonad-contrib xmobar lightdm wofi nitrogen
+        feh virtualbox-guest-utils zsh xorg picom kitty xmonad xmonad-contrib xmobar lightdm lightdm-gtk-greeter wofi nitrogen
 
 systemctl enable NetworkManager.service
 systemctl enable vboxservice.service
