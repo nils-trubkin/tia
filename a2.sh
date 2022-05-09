@@ -22,6 +22,7 @@ echo "127.0.1.1       $hostname.localdomain $hostname" >> /etc/hosts
 echo "\nSet up root password"
 passwd
 
+# Install grub
 pacman --noconfirm -S grub efibootmgr
 echo "Enter EFI partition: " 
 read efipartition
@@ -31,6 +32,7 @@ grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB
 sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
+# Install programs
 pacman -Suy --noconfirm networkmanager neovim man-db wget git doas \ # basics
         zsh dash \ # shells
         neovim \ # editor
@@ -41,6 +43,7 @@ pacman -Suy --noconfirm networkmanager neovim man-db wget git doas \ # basics
         virtualbox-guest-utils \ # vm
         feh lightdm lightdm-gtk-greeter rofi figlet \ # extras
 
+# Install dash
 rm /bin/sh
 ln -s dash /bin/sh
 
