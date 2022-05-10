@@ -36,8 +36,12 @@ if [[ $nas_ans = y ]] ; then
     chmod 644 ~/.ssh/*.pub
     read -p $'\nDownload dot? [y/N] ' dot_ans
     if [[ $dot_ans = y ]] ; then
-      echo 'git clone dot && run a4.sh'
-      #git clone git@github.com:nils-trubkin/dot.git
+      git clone --separate-git-dir=$HOME/dot git@github.com:nils-trubkin/dot.git $HOME/dot-tmp
+      #cp ~/myconf-tmp/.gitmodules ~  # If you use Git submodules
+      rm -r ~/dot-tmp/
+      alias dot='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+      dot pull
+      dot restore .
     fi
   fi
 fi
