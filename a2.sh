@@ -61,7 +61,7 @@ ln -s dash /bin/sh
 
 # Enable services for network and VM
 systemctl enable NetworkManager.service
-systemctl enable lightdm
+#systemctl enable lightdm
 if [[ $vm_ans = y ]] ; then
   systemctl enable vboxservice.service
 fi
