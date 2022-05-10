@@ -75,9 +75,11 @@ echo "permit $username as root" > /etc/doas.conf
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 curl https://raw.githubusercontent.com/nils-trubkin/rmd/master/a3.sh > /home/$username/a3.sh
-chmod +x /home/$username/a3.sh
-chown $username:$username
-
-#./a3.sh
-
+cd /home/$username
+chmod +x a3.sh
+chown $username:$username a3.sh
+su $username
+./a3.sh
+echo 'done'
+sleep 5
 exit
