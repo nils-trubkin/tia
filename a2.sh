@@ -41,7 +41,7 @@ if [[ $vm_ans = y ]] ; then
 fi
 
 # Install programs
-pacman -Suy --noconfirm networkmanager neovim man-db wget git doas htop \ # basics
+pacman -Suy --noconfirm networkmanager neovim man-db wget git doas htop openssh \ # basics
         zsh dash \ # shells
         neovim \ # editor
         xorg picom \ # window system
