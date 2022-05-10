@@ -61,8 +61,15 @@ ln -s dash /bin/sh
 
 # Enable services for network and VM
 systemctl enable NetworkManager.service
+systemctl enable lightdm
 if [[ $vm_ans = y ]] ; then
   systemctl enable vboxservice.service
+fi
+
+# Set VM resolution
+if [[ $vm_ans = y ]] ; then
+  sed -i "s/^#display-setup-script=$/display-setup-script=xrandr --output Virtual-1 --mode 1920x1080/" /etc/lightdm/lightdm.conf
+  sed -i "s/^vsync = true$/vsync = false/" /etc/xdg/picom.conf
 fi
 
 # Create new user
