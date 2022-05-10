@@ -9,13 +9,14 @@
 # ./a.sh
 
 # set font and colors
-setfont ter-114n
+setfont ter-118n
 printf %b '\e]P011161c' '\e]P7fafafa'
 clear
 
 # make a statement
 echo -e "this is art"
 sleep 5
+clear
 
 sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
 
@@ -56,6 +57,9 @@ chmod +x /mnt/a2.sh
 arch-chroot /mnt ./a2.sh
 
 umount -l /mnt
+
+# unmount iso [VM Optical]
 umount -l /dev/sr0
 eject -F /dev/sr0
+
 reboot now
