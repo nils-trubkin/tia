@@ -78,6 +78,10 @@ curl https://raw.githubusercontent.com/nils-trubkin/rmd/master/a3.sh > /home/$us
 cd /home/$username
 chmod +x a3.sh
 chown $username:$username a3.sh
+
+# avoid first start prompt
+touch /home/$username/.zshrc
+
 #./a3.sh
 
 exit
