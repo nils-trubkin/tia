@@ -38,6 +38,7 @@ if [[ $nas_ans = y ]] ; then
       if [[ $dot_ans = y ]] ; then
         echo 'git clone dot && run a4.sh'
         #git clone git@github.com:nils-trubkin/dot.git
+      fi
     fi
 fi
 
