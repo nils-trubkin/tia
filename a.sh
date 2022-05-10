@@ -14,7 +14,7 @@ printf %b '\e]P011161c' '\e]P7fafafa'
 clear
 
 # make a statement
-echo $'this is art'
+echo -n $'this is art'
 sleep 5
 clear
 
