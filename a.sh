@@ -29,6 +29,7 @@ read drv
 cfdisk $drv
 clear
 
+lsblk
 echo -n $'\nEnter the linux partition: '
 read lnx_part
 mkfs.ext4 $lnx_part 
