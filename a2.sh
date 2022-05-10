@@ -84,6 +84,9 @@ echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 # avoid first start prompt
 cd /home/$username
 touch .zshrc
+if [[ $vm_ans = y ]] ; then
+   echo 'VBoxClient --clipboard' > .zshrc
+fi
 chown $username:$username .zshrc
 
 curl https://raw.githubusercontent.com/nils-trubkin/rmd/main/a3.sh > a3.sh
