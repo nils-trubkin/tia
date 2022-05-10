@@ -61,7 +61,7 @@ ln -s dash /bin/sh
 
 # Enable services for network and VM
 systemctl enable NetworkManager.service
-#systemctl enable lightdm
+systemctl enable lightdm
 if [[ $vm_ans = y ]] ; then
   systemctl enable vboxservice.service
 fi
@@ -85,19 +85,17 @@ echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 cd /home/$username
 touch .zshrc
 if [[ $vm_ans = y ]] ; then
-   echo 'VBoxClient --clipboard' > .zshrc
+   echo 'VBoxClient-all' > .zshrc
 fi
 chown $username:$username .zshrc
 
-curl https://raw.githubusercontent.com/nils-trubkin/rmd/main/a3.sh > a3.sh
+wget https://raw.githubusercontent.com/nils-trubkin/rmd/main/a3.sh
 chown $username:$username a3.sh
 chmod +x a3.sh
 
 mkdir .xmonad
 chown $username:$username .xmonad
-curl https://raw.githubusercontent.com/nils-trubkin/rmd/main/xmonad.hs > .xmonad/xmonad.hs
+wget https://raw.githubusercontent.com/nils-trubkin/rmd/main/xmonad.hs -P .xmonad
 chown $username:$username .xmonad/xmonad.hs
-
-#./a3.sh
 
 exit
