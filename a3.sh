@@ -23,7 +23,7 @@ if [[ $nas_ans = y ]] ; then
   read -sp 'password: ' nas_psd
   echo ''
   id
-  read -p $'uid: ' nas_uid
+  read -p 'uid: ' nas_uid
   read -p 'volume on NAS: ' nas_vol
   read -p 'local mount point: ' nas_mnt
   
