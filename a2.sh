@@ -78,8 +78,6 @@ curl https://raw.githubusercontent.com/nils-trubkin/rmd/master/a3.sh > /home/$us
 cd /home/$username
 chmod +x a3.sh
 chown $username:$username a3.sh
-su $username
-./a3.sh
-echo 'done'
-sleep 5
+#./a3.sh
+
 exit
