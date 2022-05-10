@@ -32,6 +32,8 @@ if [[ $nas_ans = y ]] ; then
   if [[ $ssh_ans = y ]] ; then
     mkdir ~/.ssh
     cp $nas_mnt/ssh/id_ed25519* ~/.ssh/
+    chmod 600 ~/.ssh/*
+    chmod 644 ~/.ssh/*.pub
     read -p $'\nDownload dot? [y/N] ' dot_ans
     if [[ $dot_ans = y ]] ; then
       echo 'git clone dot && run a4.sh'
