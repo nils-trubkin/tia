@@ -37,11 +37,17 @@ if [[ $nas_ans = y ]] ; then
     read -p $'\nDownload dot? [y/N] ' dot_ans
     if [[ $dot_ans = y ]] ; then
       git clone --separate-git-dir=$HOME/dot git@github.com:nils-trubkin/dot.git $HOME/dot-tmp
+      chmod +x ~/dot-tmp/a4.sh
+      ~/dot-tmp/a4.sh
       #cp ~/myconf-tmp/.gitmodules ~  # If you use Git submodules
       rm -r ~/dot-tmp/
       alias dot='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
       dot pull
       dot restore .
+      read -p $'\nReboot? [y/N] ' rb_ans
+      if [[ $rb_ans = y ]] ; then
+        systemctl reboot
+      fi  
     fi
   fi
 fi
