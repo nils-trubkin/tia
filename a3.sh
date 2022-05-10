@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Arch Installer
+# Part 3: aura, zsh, brave, nas, ssh, dl dot 
+
 # Install aura
 git clone https://aur.archlinux.org/aura-bin.git
 cd aura-bin
@@ -7,7 +10,7 @@ makepkg -s
 doas pacman --noconfirm -U aura-bin-*
 
 # Install zsh 10k
-doas aura -A --noconfirm zsh-theme-powerlevel10k-git
+sudo aura -A --noconfirm zsh-theme-powerlevel10k-git zsh-vi-mode brave-beta-bin
 
 read -p "Connect NAS? [y/N]" nas_ans
 if [[ $nas_ans = y ]] ; then
@@ -33,10 +36,9 @@ if [[ $nas_ans = y ]] ; then
   read -p "Download SSH keys? [y/N]" ssh_ans
     if [[ $ssh_ans = y ]] ; then
       cp $nas_mnt/ssh/id_ed25519* ~/.ssh/
-      read -p "Download rmdp? [y/N]" rmdp_ans
+      read -p "Download dot? [y/N]" rmdp_ans
       if [[ $rmdp_ans = y ]] ; then
-        git clone git@github.com:nils-trubkin/rmdp.git
-        chmod +x rmdp/a4.sh
+        git clone git@github.com:nils-trubkin/dot.git
     fi
 fi
 
