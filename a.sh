@@ -19,9 +19,6 @@ sleep 5
 
 sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
 
-# refresh keyring
-pacman -Suy --noconfirm archlinux-keyring
-
 timedatectl set-ntp true
 
 # select drive
