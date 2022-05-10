@@ -88,6 +88,8 @@ chown $username:$username a3.sh
 
 # avoid first start prompt
 touch /home/$username/.zshrc
+mkdir /home/$username/.xmonad
+curl https://raw.githubusercontent.com/nils-trubkin/rmd/master/xmonad.hs > /home/$username/.xmonad/xmonad.hs
 
 #./a3.sh
 
