@@ -90,9 +90,11 @@ chown $username:$username a3.sh
 touch .zshrc
 chown $username:$username .zshrc
 
-su $username
 mkdir /home/$username/.xmonad
+chown $username:$username /home/$username/.xmonad
+
 curl https://raw.githubusercontent.com/nils-trubkin/rmd/main/xmonad.hs > /home/$username/.xmonad/xmonad.hs
+chown $username:$username /home/$username/.xmonad/xmonad.hs
 
 #./a3.sh
 
