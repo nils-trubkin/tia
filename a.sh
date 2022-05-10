@@ -24,22 +24,22 @@ timedatectl set-ntp true
 
 # select drive
 lsblk
-echo $'\nEnter the drive: '
+echo -n $'\nEnter the drive: '
 read drv
 cfdisk $drv
 clear
 
-echo $'Enter the linux partition: '
+echo -n $'\nEnter the linux partition: '
 read lnx_part
 mkfs.ext4 $lnx_part 
 
-echo $'Enter EFI partition: '
+echo -n $'\nEnter EFI partition: '
 read efi_part
 mkfs.vfat -F 32 $efi_part
 
-read -p $'\nDid you also create swap partition? [y/N]' swap_ans
+read -p $'\nDid you also create swap partition? [y/N] ' swap_ans
 if [[ $swap_ans = y ]] ; then
-  echo $'\nEnter swap partition: '
+  echo -n $'\nEnter swap partition: '
   read swap_part
   mkswap $swap_part
   swapon $swap_part
