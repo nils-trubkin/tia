@@ -41,8 +41,7 @@ if [[ $nas_ans = y ]] ; then
       ~/dot-tmp/a4.sh
       #cp ~/myconf-tmp/.gitmodules ~  # If you use Git submodules
       rm -r ~/dot-tmp/
-      git --git-dir=$HOME/.myconf/ --work-tree=$HOME pull
-      git --git-dir=$HOME/.myconf/ --work-tree=$HOME restore .
+      git --git-dir=$HOME/dot/ --work-tree=$HOME restore .
       read -p $'\nReboot? [y/N] ' rb_ans
       if [[ $rb_ans = y ]] ; then
         systemctl reboot
