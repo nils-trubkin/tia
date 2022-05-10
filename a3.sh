@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Arch Installer
 # Part 3: aura, zsh, brave, nas, ssh, dl dot 
@@ -21,15 +21,16 @@ if [[ $nas_ans = y ]] ; then
   read -p 'hostname: ' nas_host
   read -p 'user: ' nas_usr
   read -sp 'password: ' nas_psd
+  echo ''
   id
-  read -p $'\nuid: ' nas_uid
+  read -p $'uid: ' nas_uid
   read -p 'volume on NAS: ' nas_vol
   read -p 'local mount point: ' nas_mnt
   
   # Create mount point and mount NAS
   mkdir -p $nas_mnt
   doas pacman -Suy --noconfirm cifs-utils
-  doas mount -t cifs -o username=$nas_user,password=$nas_pass,uid=$nas_uid //$nas_host/$nas_vol $nas_mnt
+  doas mount -t cifs -o username=$nas_usr,password=$nas_psd,uid=$nas_uid //$nas_host/$nas_vol $nas_mnt
   
   read -p $'\nDownload SSH keys? [y/N] ' ssh_ans
   if [[ $ssh_ans = y ]] ; then
