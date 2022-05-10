@@ -12,13 +12,19 @@
 setfont ter-114n
 printf %b '\e]P011161c' '\e]P7fafafa'
 clear
+
 # make a statement
 echo "this is art"
 sleep 5
 
 sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
+
+# refresh keyring
 pacman -Suy --noconfirm archlinux-keyring
+
 timedatectl set-ntp true
+
+# select drive
 lsblk
 echo "Enter the drive: "
 read drv
@@ -44,6 +50,8 @@ fi
 mount $lnx_part /mnt 
 pacstrap /mnt base base-devel linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
+
+# this fixes an error about 'fstab changed but systemd uses old version' later on
 systemctl daemon-reload
 
 curl https://raw.githubusercontent.com/nils-trubkin/rmd/master/a2.sh > /mnt/a2.sh
