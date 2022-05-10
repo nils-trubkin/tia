@@ -14,7 +14,7 @@ printf %b '\e]P011161c' '\e]P7fafafa'
 clear
 
 # make a statement
-echo "this is art"
+print "this is art"
 sleep 5
 
 sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
@@ -23,15 +23,15 @@ timedatectl set-ntp true
 
 # select drive
 lsblk
-echo "\nEnter the drive: "
+print "\nEnter the drive: "
 read drv
 cfdisk $drv
 
-echo "\nEnter the linux partition: "
+print "\nEnter the linux partition: "
 read lnx_part
 mkfs.ext4 $lnx_part 
 
-echo "\nEnter EFI partition: "
+print "\nEnter EFI partition: "
 read efi_part
 mkfs.vfat -F 32 $efi_part
 
