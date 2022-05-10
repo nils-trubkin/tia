@@ -86,12 +86,14 @@ cd /home/$username
 touch .zshrc
 chown $username:$username .zshrc
 
-su $username
 curl https://raw.githubusercontent.com/nils-trubkin/rmd/main/a3.sh > a3.sh
+chown $username:$username a3.sh
 chmod +x a3.sh
 
 mkdir .xmonad
+chown $username:$username .xmonad
 curl https://raw.githubusercontent.com/nils-trubkin/rmd/main/xmonad.hs > .xmonad/xmonad.hs
+chown $username:$username .xmonad/xmonad.sh
 
 #./a3.sh
 echo 'done'
