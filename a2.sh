@@ -81,24 +81,20 @@ passwd $username
 echo "permit $username as root" > /etc/doas.conf
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
-echo 'done...'
-sleep 10
-
-#curl https://raw.githubusercontent.com/nils-trubkin/rmd/main/a3.sh > /home/$username/a3.sh
-#cd /home/$username
-#chmod +x a3.sh
-#chown $username:$username a3.sh
-
 # avoid first start prompt
-#touch .zshrc
-#chown $username:$username .zshrc
+cd /home/$username
+touch .zshrc
+chown $username:$username .zshrc
 
-#mkdir /home/$username/.xmonad
-#chown $username:$username /home/$username/.xmonad
+su $username
+curl https://raw.githubusercontent.com/nils-trubkin/rmd/main/a3.sh > a3.sh
+chmod +x a3.sh
 
-#curl https://raw.githubusercontent.com/nils-trubkin/rmd/main/xmonad.hs > /home/$username/.xmonad/xmonad.hs
-#chown $username:$username /home/$username/.xmonad/xmonad.hs
+mkdir .xmonad
+curl https://raw.githubusercontent.com/nils-trubkin/rmd/main/xmonad.hs > .xmonad/xmonad.hs
 
 #./a3.sh
-
+echo 'done'
+sleep 5
+exit
 exit
