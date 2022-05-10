@@ -34,7 +34,7 @@ echo -n $'\nEnter the linux partition: '
 read lnx_part
 mkfs.ext4 $lnx_part 
 
-echo -n $'\nEnter EFI partition: '
+echo -n $'Enter EFI partition: '
 read efi_part
 mkfs.vfat -F 32 $efi_part
 
