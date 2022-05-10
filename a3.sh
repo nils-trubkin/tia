@@ -14,10 +14,6 @@ sudo aura -A --noconfirm zsh-theme-powerlevel10k-git zsh-vi-mode brave-beta-bin
 
 read -p $'\nConnect NAS? [y/N] ' nas_ans
 if [[ $nas_ans = y ]] ; then
-  read -p $'\nActivate VM clipboard? [y/N] ' vm_ans
-  if [[ $vm_ans = y ]] ; then
-     VBoxClient --clipboard
-  fi
   read -p 'hostname: ' nas_host
   read -p 'user: ' nas_usr
   read -sp 'password: ' nas_psd
