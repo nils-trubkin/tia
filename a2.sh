@@ -69,7 +69,7 @@ fi
 # Set VM resolution
 if [[ $vm_ans = y ]] ; then
   sed -i "s/^#display-setup-script=$/display-setup-script=xrandr --output Virtual-1 --mode 1920x1080/" /etc/lightdm/lightdm.conf
-  sed -i "s/^vsync = true$/vsync = false/" /etc/xdg/picom.conf
+  sed -i "s/^vsync = true;$/vsync = false;/" /etc/xdg/picom.conf
 fi
 
 # Create new user
@@ -81,7 +81,7 @@ passwd $username
 echo "permit $username as root" > /etc/doas.conf
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
-curl https://raw.githubusercontent.com/nils-trubkin/rmd/master/a3.sh > /home/$username/a3.sh
+curl https://raw.githubusercontent.com/nils-trubkin/rmd/main/a3.sh > /home/$username/a3.sh
 cd /home/$username
 chmod +x a3.sh
 chown $username:$username a3.sh
@@ -92,7 +92,7 @@ chown $username:$username .zshrc
 
 su $username
 mkdir /home/$username/.xmonad
-curl https://raw.githubusercontent.com/nils-trubkin/rmd/master/xmonad.hs > /home/$username/.xmonad/xmonad.hs
+curl https://raw.githubusercontent.com/nils-trubkin/rmd/main/xmonad.hs > /home/$username/.xmonad/xmonad.hs
 
 #./a3.sh
 
