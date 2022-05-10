@@ -93,10 +93,8 @@ chmod +x a3.sh
 mkdir .xmonad
 chown $username:$username .xmonad
 curl https://raw.githubusercontent.com/nils-trubkin/rmd/main/xmonad.hs > .xmonad/xmonad.hs
-chown $username:$username .xmonad/xmonad.sh
+chown $username:$username .xmonad/xmonad.hs
 
 #./a3.sh
-echo 'done'
-sleep 5
-exit
+
 exit
