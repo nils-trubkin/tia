@@ -40,19 +40,19 @@ if [[ $vm_ans = y ]] ; then
 fi
 
 # Install programs
-pacman -Suy --noconfirm networkmanager neovim man-db wget git doas htop openssh \ # basics
-        zsh dash \ # shells
-        neovim \ # editor
-        xorg picom \ # window system
-        xmonad xmonad-contrib xmobar \ # window manager
-        rofi \ # launcher
-        feh \ # wallpaper
-        kitty ttf-fira-code \ # term
-        zip unzip unrar p7zip gzip bzip2 \ # archivers
-        lightdm lightdm-gtk-greeter \ # desktop manager
-        neofetch figlet zathura \ # extras
-        imagemagick \ # dep of icat kitten in kitty
-        go # dep of vim-hexokinase
+pacman -Suy --noconfirm networkmanager neovim man-db wget git doas htop openssh `# basics` \
+        zsh dash `# shells` \
+        neovim `# editor` \
+        xorg picom `# window system` \
+        xmonad xmonad-contrib xmobar `# window manager` \
+        rofi `# launcher` \
+        feh `# wallpaper` \
+        kitty ttf-fira-code `# term` \
+        zip unzip unrar p7zip gzip bzip2 `# archivers` \
+        lightdm lightdm-gtk-greeter `# desktop manager` \
+        neofetch figlet zathura `# extras` \
+        imagemagick `# dep of icat kitten in kitty` \
+        go `# dep of vim-hexokinase` \
 
 # Install dash
 rm /bin/sh
