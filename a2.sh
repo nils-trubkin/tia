@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Arch Installer
-# Part 2: locale, hostname, grub, , dl & run 'a2.sh' 
+# Part 2: locale, hostname, grub, programs, services, user, sudo file, dl 'a3.sh' 
 
 clear
 pacman -Suy --noconfirm sed
