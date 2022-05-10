@@ -87,8 +87,10 @@ chmod +x a3.sh
 chown $username:$username a3.sh
 
 # avoid first start prompt
+touch .zshrc
+chown $username:$username .zshrc
+
 su $username
-touch /home/$username/.zshrc
 mkdir /home/$username/.xmonad
 curl https://raw.githubusercontent.com/nils-trubkin/rmd/master/xmonad.hs > /home/$username/.xmonad/xmonad.hs
 
