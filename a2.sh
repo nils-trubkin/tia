@@ -41,7 +41,7 @@ if [[ $vm_ans = y ]] ; then
 fi
 
 # Install programs
-pacman -Suy --noconfirm networkmanager neovim man-db wget git doas \ # basics
+pacman -Suy --noconfirm networkmanager neovim man-db wget git doas htop \ # basics
         zsh dash \ # shells
         neovim \ # editor
         xorg picom \ # window system
@@ -51,7 +51,8 @@ pacman -Suy --noconfirm networkmanager neovim man-db wget git doas \ # basics
         kitty ttf-fira-code \ # term
         zip unzip unrar p7zip gzip bzip2 \ # archivers
         lightdm lightdm-gtk-greeter \ # desktop manager
-        figlet imagemagick zathura \ # extras
+        neofetch figlet zathura \ # extras
+        imagemagick \ # dep of icat kitten in kitty
         go # dep of vim-hexokinase
 
 # Install dash
