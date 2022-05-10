@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Arch Installer
+# Part 2: locale, hostname, grub, , dl & run 'a2.sh' 
+
 clear
 pacman -Suy --noconfirm sed
 
@@ -22,8 +25,8 @@ echo "127.0.1.1       $hostname.localdomain $hostname" >> /etc/hosts
 echo "\nSet up root password"
 passwd
 
-# Install grub
-pacman --noconfirm -S grub efibootmgr
+# Install grub [UEFI]
+pacman -Suy --noconfirm grub efibootmgr
 echo "Enter EFI partition: " 
 read efipartition
 mkdir /boot/EFI
@@ -32,16 +35,24 @@ grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB
 sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
+read -p "Install virtualbox-guest-utils? [y/N]" vm_ans
+if [[ $vm_ans = y ]] ; then
+  pacman -Suy --noconfirm virtualbox-guest-utils \ # vm
+fi
+
 # Install programs
 pacman -Suy --noconfirm networkmanager neovim man-db wget git doas \ # basics
         zsh dash \ # shells
         neovim \ # editor
-        xorg picom \ # wm
-        xmonad xmonad-contrib xmobar \ # wm
+        xorg picom \ # window system
+        xmonad xmonad-contrib xmobar \ # window manager
+        rofi \ # launcher
+        feh \ # wallpaper
         kitty ttf-fira-code \ # term
         zip unzip unrar p7zip gzip bzip2 \ # archivers
-        virtualbox-guest-utils \ # vm
-        feh lightdm lightdm-gtk-greeter rofi figlet \ # extras
+        lightdm lightdm-gtk-greeter \ # desktop manager
+        figlet imagemagick zathura \ # extras
+        go # dep of vim-hexokinase
 
 # Install dash
 rm /bin/sh
@@ -49,7 +60,9 @@ ln -s dash /bin/sh
 
 # Enable services for network and VM
 systemctl enable NetworkManager.service
-systemctl enable vboxservice.service
+if [[ $vm_ans = y ]] ; then
+  systemctl enable vboxservice.service
+fi
 
 # Create new user
 echo "Enter username: "
@@ -61,8 +74,8 @@ passwd $username
 echo "permit $username as root" > /etc/doas.conf
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
-curl https://raw.githubusercontent.com/nils-trubkin/rmd/master/a3.sh > a3.sh
+curl https://raw.githubusercontent.com/nils-trubkin/rmd/master/a3.sh > /home/$username/a3.sh
 chmod +x a3.sh
-./a3.sh
+#./a3.sh
 
 exit
