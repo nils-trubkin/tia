@@ -14,7 +14,7 @@ printf %b '\e]P011161c' '\e]P7fafafa'
 clear
 
 # make a statement
-echo -e "this is art"
+echo $'this is art'
 sleep 5
 clear
 
@@ -24,21 +24,22 @@ timedatectl set-ntp true
 
 # select drive
 lsblk
-echo -e "\nEnter the drive: "
+echo $'\nEnter the drive: '
 read drv
 cfdisk $drv
+clear
 
-echo -e "\nEnter the linux partition: "
+echo $'Enter the linux partition: '
 read lnx_part
 mkfs.ext4 $lnx_part 
 
-echo -e "\nEnter EFI partition: "
+echo $'Enter EFI partition: '
 read efi_part
 mkfs.vfat -F 32 $efi_part
 
-read -p "\nDid you also create swap partition? [y/N]" swap_ans
+read -p $'\nDid you also create swap partition? [y/N]' swap_ans
 if [[ $swap_ans = y ]] ; then
-  echo "\nEnter swap partition: "
+  echo $'\nEnter swap partition: '
   read swap_part
   mkswap $swap_part
   swapon $swap_part
