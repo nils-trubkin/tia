@@ -15,8 +15,7 @@ echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 
-echo -n $'\nChoose hostname: '
-read hostname
+read -p $'\nChoose hostname: ' hostname
 echo $hostname > /etc/hostname
 echo "127.0.0.1       localhost" >> /etc/hosts
 echo "::1             localhost" >> /etc/hosts
@@ -27,8 +26,8 @@ passwd
 
 # Install grub [UEFI]
 pacman -Suy --noconfirm grub efibootmgr
-echo $'\nEnter EFI partition: '
-read efipartition
+lsblk
+read -p $'\nEnter EFI partition: ' efipartition
 mkdir /boot/EFI
 mount $efipartition /boot/EFI 
 grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB
