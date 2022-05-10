@@ -37,7 +37,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 read -p $'\nInstall virtualbox-guest-utils? [y/N] ' vm_ans
 if [[ $vm_ans = y ]] ; then
-  pacman -Suy --noconfirm virtualbox-guest-utils `# vm` \
+  pacman -Suy --noconfirm virtualbox-guest-utils
 fi
 
 # Install programs
