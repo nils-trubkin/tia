@@ -53,7 +53,7 @@ pacman -Suy --noconfirm networkmanager neovim man-db wget git doas htop openssh 
         zip unzip unrar p7zip gzip bzip2 `# archivers` \
         lightdm lightdm-gtk-greeter `# desktop manager` \
         neofetch figlet zathura tldr `# extras` \
-        ghc python python-pip `# languages` \
+        ghc python python-pip gcc `# languages` \
         imagemagick `# dep of icat kitten in kitty` \
         go `# dep of vim-hexokinase` \
 
