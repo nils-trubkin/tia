@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # Arch Installer
-# Part 2: locale, hostname, grub, programs, services, user, sudo file, dl 'a3.sh' 
+# Part 2: Install before reboot
+# Does: locale, hostname, grub, programs, services, user, sudo file, dl 'a3.sh' 
 
 clear
 pacman -Suy --noconfirm sed
@@ -89,10 +90,12 @@ if [[ $vm_ans = y ]] ; then
 fi
 chown $username:$username .zshrc
 
+# Download the 'a3' and allow $username to execute it
 wget https://raw.githubusercontent.com/nils-trubkin/rmd/main/a3.sh
 chown $username:$username a3.sh
 chmod +x a3.sh
 
+# Download barebones xmonad config for kitty
 mkdir .xmonad
 chown $username:$username .xmonad
 wget https://raw.githubusercontent.com/nils-trubkin/rmd/main/xmonad.hs -P .xmonad
