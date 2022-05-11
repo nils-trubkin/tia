@@ -51,7 +51,7 @@ pacman -Suy --noconfirm networkmanager neovim man-db wget git doas htop openssh 
         kitty ttf-fira-code `# term` \
         zip unzip unrar p7zip gzip bzip2 `# archivers` \
         lightdm lightdm-gtk-greeter `# desktop manager` \
-        neofetch figlet zathura `# extras` \
+        neofetch figlet zathura tldr `# extras` \
         imagemagick `# dep of icat kitten in kitty` \
         go `# dep of vim-hexokinase` \
 
