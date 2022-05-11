@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Arch Installer
-# Part 3: aura, zsh, brave, nas, ssh, dl dot 
+# Part 3: after reboot
+# Does: AUR pkgs, nas, ssh, dl dot
 
 # Install aura
 git clone https://aur.archlinux.org/aura-bin.git
@@ -9,7 +10,7 @@ cd aura-bin
 makepkg -s
 doas pacman --noconfirm -U aura-bin-*
 
-# Install zsh 10k
+# Install AUR packages
 sudo aura -A --noconfirm zsh-theme-powerlevel10k-git zsh-vi-mode brave-beta-bin
 
 read -p $'\nConnect NAS? [y/N] ' nas_ans
@@ -32,11 +33,13 @@ if [[ $nas_ans = y ]] ; then
   if [[ $ssh_ans = y ]] ; then
     mkdir ~/.ssh
     cp $nas_mnt/ssh/id_ed25519* ~/.ssh/
+    # Give correct perms for ssh keys
     chmod 600 ~/.ssh/*
     chmod 644 ~/.ssh/*.pub
-    read -p $'\nDownload dot? [y/N] ' dot_ans
+    read -p $'\nDownload and apply dot (the files in $HOME will be replaced)? [y/N] ' dot_ans
     if [[ $dot_ans = y ]] ; then
-      git clone --separate-git-dir=$HOME/dot git@github.com:nils-trubkin/dot.git $HOME/dot-tmp
+      # git black magic or something
+      git clone --separate-git-dir=$HOME/.dot git@github.com:nils-trubkin/dot.git $HOME/dot-tmp
       chmod +x ~/dot-tmp/a4.sh
       ~/dot-tmp/a4.sh
       #cp ~/myconf-tmp/.gitmodules ~  # If you use Git submodules
