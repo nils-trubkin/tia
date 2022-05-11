@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # Arch Installer
-# Part 1: partition [UEFI], pacstrap, dl & run 'a2.sh' 
+# Part 1: Before chroot
+# Does: partition [UEFI], pacstrap, chroot with 'a2.sh' 
 
 # To start:
 # curl https://raw.githubusercontent.com/nils-trubkin/rmd/master/a.sh > a.sh
