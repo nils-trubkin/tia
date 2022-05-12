@@ -5,7 +5,7 @@
 # Does: partition [UEFI], pacstrap, chroot with 'a2.sh' 
 
 # To start:
-# curl https://raw.githubusercontent.com/nils-trubkin/tia/master/a.sh > a.sh
+# curl https://raw.githubusercontent.com/nils-trubkin/tia/main/a.sh > a.sh
 # chmod +x a.sh
 # ./a.sh
 
@@ -54,7 +54,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 # this fixes an error about 'fstab changed but systemd uses old version' later on
 systemctl daemon-reload
 
-curl https://raw.githubusercontent.com/nils-trubkin/tia/master/a2.sh > /mnt/a2.sh
+curl https://raw.githubusercontent.com/nils-trubkin/tia/main/a2.sh > /mnt/a2.sh
 chmod +x /mnt/a2.sh
 
 arch-chroot /mnt ./a2.sh
