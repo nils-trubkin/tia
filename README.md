@@ -5,7 +5,7 @@
 
 #
 
-> my ricing bootstrap for arch linux or something~
+> my ricing bootstrap for arch linux or something
 
 ### Installation (from arch iso):
 ```
