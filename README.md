@@ -2,26 +2,26 @@
 <img src="https://raw.githubusercontent.com/nils-trubkin/tia/main/tia.png" height="75" alt="this is art_">
 </p>
 
-## yet another ricing bootstrap for Arch
+## my ricing bootstrap for Arch 〰
 
 | type           | primary               | extra                 |
 | ---------------|:---------------------:|:---------------------:|
-| window system  |` xorg                 `|` picom                 `|
-| window manager |` xmonad                `|` xmonad-contrib xmobar `|
-| launcher       |` rofi                  `|                       |
-| shell          |` zsh                   `|` dash zsh-theme-powerlevel10k-git zsh-vi-mode `|
-| editor         |` neovim                `|` vim-plug              `|
-| browser        |` brave-beta-bin        `|                       |
-| terminal       |` kitty                 `|                       |
-| font           |` ttf-fira-code         `|                       |
-| network        |` networkmanager        `|                       |
-| help           |` man-db                `|` tldr                  `|
-| download       |` wget                  `|` git rankmirrors-systemd `|
-| ssh            |` openssh               `|                       |
-| rice           |` neofetch              `|` pfetch                `|
-| archivers      |` unzip zip unrar       `|` p7zip gzip bzip2      `|
-| images         |` feh                   `|` imagemagk             `|
-| languages      |` gcc python python-pip `|` ghc go                `|
+| ⚙ window system  |` xorg                 `|` picom                 `|
+| 🪟 window manager |` xmonad                `|` xmonad-contrib xmobar `|
+| ▶ launcher       |` rofi                  `|                       |
+| 🐚 shell          |` zsh                   `|` dash zsh-theme-powerlevel10k-git zsh-vi-mode `|
+| 📄 editor         |` neovim                `|` vim-plug              `|
+| 🌐 browser        |` brave-beta-bin        `|                       |
+| 🖥 terminal       |` kitty                 `|                       |
+| 🔡 font           |` ttf-fira-code         `|                       |
+| 🗄 network        |` networkmanager        `|                       |
+| ❔ help           |` man-db                `|` tldr                  `|
+| ⤵ download       |` wget                  `|` git rankmirrors-systemd `|
+| 🔑 ssh            |` openssh               `|                       |
+| 🍚 rice           |` neofetch              `|` pfetch                `|
+| 📚 archivers      |` unzip zip unrar       `|` p7zip gzip bzip2      `|
+| 🖼 images         |` feh                   `|` imagemagk             `|
+| 🔣 languages      |` gcc python python-pip `|` ghc go                `|
 
 <p align="center">
   <a href="https://archlinux.org/"><img src="https://archlinux.org/static/logos/archlinux-logo-white-scalable.svg" height="150" alt="arch linux"></a>
