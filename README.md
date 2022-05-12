@@ -1,8 +1,18 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/nils-trubkin/tia/main/tia.png" height="75" alt="this is art_">
+  <br>
+  <img src="https://raw.githubusercontent.com/nils-trubkin/tia/main/tia.png" height="75" alt="this is art_">
 </p>
 
-## my ricing bootstrap for Arch 〰
+#
+
+> my ricing bootstrap for arch linux or something~
+
+### Installation (from arch iso):
+```
+curl https://raw.githubusercontent.com/nils-trubkin/tia/main/a.sh > a.sh
+chmod +x a.sh
+./a.sh
+```
 
 | type           | primary               | extra                 |
 | ---------------|:---------------------:|:---------------------:|
@@ -22,7 +32,8 @@
 | 📚 archivers      |` unzip zip unrar       `|` p7zip gzip bzip2      `|
 | 🖼 images         |` feh                   `|` imagemagk             `|
 | 🔣 languages      |` gcc python python-pip `|` ghc go                `|
-
+<br>
+<br>
 <p align="center">
   <a href="https://archlinux.org/"><img src="https://archlinux.org/static/logos/archlinux-logo-white-scalable.svg" height="150" alt="arch linux"></a>
   <br>
