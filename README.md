@@ -30,7 +30,7 @@ chmod +x a.sh
 | 🔑 ssh            |` openssh               `|                       |
 | 🍚 rice           |` neofetch              `|` pfetch                `|
 | 📚 archivers      |` unzip zip unrar       `|` p7zip gzip bzip2      `|
-| 🖼 images         |` feh                   `|` imagemagk             `|
+| 🖼 images         |` feh                    `|` imagemagick            `|
 | 🔣 languages      |` gcc python python-pip `|` ghc go                `|
 <br>
 <br>
