@@ -25,10 +25,10 @@ chmod +x a.sh
 | 🖥 terminal       |` kitty                 `|                       |
 | 🔡 font           |` ttf-fira-code         `|                       |
 | 🗄 network        |` networkmanager        `|                       |
-| ❔ help           |` man-db                `|` tldr                  `|
+| ❔ help           |` man-db                `|` tldr  exa            `|
 | ⤵ download       |` wget                  `|` git rankmirrors-systemd `|
 | 🔑 ssh            |` openssh               `|                       |
-| 🍚 rice           |` neofetch              `|` pfetch                `|
+| 🍚 rice           |` neofetch              `|` pfetch   lolcat       `|
 | 📚 archivers      |` unzip zip unrar       `|` p7zip gzip bzip2      `|
 | 🖼 images         |` feh                    `|` imagemagick            `|
 | 🔣 languages      |` gcc python python-pip `|` ghc go                `|
