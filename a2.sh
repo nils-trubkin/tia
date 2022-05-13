@@ -42,7 +42,7 @@ if [[ $vm_ans = y ]] ; then
 fi
 
 # Install programs
-pacman -Suy --noconfirm networkmanager neovim man-db wget git doas htop openssh `# basics` \
+pacman -Suy --noconfirm networkmanager neovim man-db wget git doas htop openssh exa `# basics` \
         zsh dash `# shells` \
         neovim `# editor` \
         xorg picom `# window system` \
@@ -52,7 +52,7 @@ pacman -Suy --noconfirm networkmanager neovim man-db wget git doas htop openssh 
         kitty ttf-fira-code `# term` \
         zip unzip unrar p7zip gzip bzip2 `# archivers` \
         lightdm lightdm-gtk-greeter `# desktop manager` \
-        neofetch figlet zathura tldr `# extras` \
+        neofetch figlet lolcat zathura tldr `# extras` \
         ghc python python-pip gcc `# languages` \
         imagemagick `# dep of icat kitten in kitty` \
         go `# dep of vim-hexokinase` \
