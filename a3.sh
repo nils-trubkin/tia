@@ -40,8 +40,6 @@ if [[ $nas_ans = y ]] ; then
     if [[ $dot_ans = y ]] ; then
       # git black magic or something
       git clone --separate-git-dir=$HOME/.dot git@github.com:nils-trubkin/dot.git $HOME/dot-tmp
-      chmod +x ~/dot-tmp/a4.sh
-      ~/dot-tmp/a4.sh
       #cp ~/myconf-tmp/.gitmodules ~  # If you use Git submodules
       rm -r ~/dot-tmp/
       git --git-dir=$HOME/dot/ --work-tree=$HOME restore .
