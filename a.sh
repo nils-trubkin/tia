@@ -35,9 +35,11 @@ echo -n $'\nEnter the linux partition: '
 read lnx_part
 mkfs.ext4 $lnx_part 
 
-echo -n $'Enter EFI partition: '
-read efi_part
-mkfs.vfat -F 32 $efi_part
+read -p $'\nDid you also create EFI partition? [y/N] ' efi_ans
+if [[ $efi_ans = y ]] ; then
+  read -p $'Enter EFI partition: ' efi_part
+  mkfs.vfat -F 32 $efi_part
+fi
 
 read -p $'\nDid you also create swap partition? [y/N] ' swap_ans
 if [[ $swap_ans = y ]] ; then
