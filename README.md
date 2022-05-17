@@ -14,24 +14,25 @@ chmod +x a.sh
 ./a.sh
 ```
 
-| type           | primary               | extra                 |
-| ---------------|:---------------------:|:---------------------:|
-| ⚙ window system  |` xorg                 `|` picom                 `|
-| 🪟 window manager |` xmonad                `|` xmonad-contrib xmobar `|
-| ▶ launcher       |` rofi                  `|                       |
+| type              | primary                 | extra                                          |
+| ------------------|:-----------------------:|:----------------------------------------------:|
+| ⚙ window system   |` xorg                  `|` picom                                        `|
+| 🪟 window manager |` xmonad-git            `|` xmonad-contrib-git xmobar-git                `|
+| ▶ launcher        |` rofi                  `|                                                |
 | 🐚 shell          |` zsh                   `|` dash zsh-theme-powerlevel10k-git zsh-vi-mode `|
-| 📄 editor         |` neovim                `|` vim-plug              `|
-| 🌐 browser        |` brave-beta-bin        `|                       |
-| 🖥 terminal       |` kitty                 `|                       |
-| 🔡 font           |` ttf-fira-code         `|                       |
-| 🗄 network        |` networkmanager        `|                       |
-| ❔ help           |` man-db                `|` tldr  exa            `|
-| ⤵ download       |` wget                  `|` git rankmirrors-systemd `|
-| 🔑 ssh            |` openssh               `|                       |
-| 🍚 rice           |` neofetch              `|` pfetch   lolcat       `|
-| 📚 archivers      |` unzip zip unrar       `|` p7zip gzip bzip2      `|
-| 🖼 images         |` feh                    `|` imagemagick            `|
-| 🔣 languages      |` gcc python python-pip `|` ghc go                `|
+| 📄 editor         |` neovim                `|` vim-plug                                     `|
+| 🌐 browser        |` brave-beta-bin        `|                                                |
+| 🖥 terminal        |` kitty                 `|                                                |
+| 🔡 font           |` ttf-fira-code         `|                                                |
+| 📦 AUR            |` aura                  `|`  yay                                         `|
+| 🗄 network         |` networkmanager        `|                                                |
+| ❔ help           |` man-db                `|` tldr  exa                                    `|
+| ⤵ download        |` wget                  `|` git rankmirrors-systemd                      `|
+| 🔑 ssh            |` openssh               `|                                                |
+| 🍚 rice           |` neofetch              `|` pfetch   lolcat                              `|
+| 📚 archivers      |` unzip zip unrar       `|` p7zip gzip bzip2                             `|
+| 🖼 images          |` feh                   `|` imagemagick                                  `|
+| 🔣 languages      |` gcc python python-pip `|` ghc go                                       `|
 <br>
 <br>
 <p align="center">
