@@ -44,7 +44,7 @@ chmod +x a.sh
   </a>
   <br>
   <a href="https://github.com/kovidgoyal/kitty"><img src="https://sw.kovidgoyal.net/kitty/_static/kitty.svg" height="150" alt="kitty"></a>
-  <a href="https://github.com/tonsky/FiraCode"><img src="https://raw.githubusercontent.com/tonsky/FiraCode/master/extras/logo.svg" height="150" alt="fira-code"></a>
+  <a href="https://github.com/ryanoasis/nerd-fonts"><img src="https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/images/nerd-fonts-logo.svg" height="150" alt="nerd-fonts"></a>
   <br>
   <a href="https://github.com/neovim/neovim"><img src="https://raw.githubusercontent.com/neovim/neovim.github.io/master/logos/neovim-logo-300x87.png" alt="Neovim"></a>
   <a href="https://github.com/junegunn/vim-plug"><img src="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.png" height="75" alt="vim-plug"></a>
