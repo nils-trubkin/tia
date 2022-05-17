@@ -25,15 +25,32 @@ echo "127.0.1.1       $hostname.localdomain $hostname" >> /etc/hosts
 echo $'\nSet up root password'
 passwd
 
-# Install grub [UEFI]
-pacman -Suy --noconfirm grub efibootmgr
-echo ''
-lsblk
-read -p $'\nEnter EFI partition: ' efipartition
-mkdir /boot/EFI
-mount $efipartition /boot/EFI 
-grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB
-sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
+read -p $'\nIs this a BIOS (not UEFI) setup? [y/N] ' bios_ans
+if [[ $bios_ans = y ]] ; then
+  # Install grub [BIOS]
+  pacman -Suy --noconfirm grub
+  echo ''
+  lsblk
+  read -p $'\nEnter the partitioned disk (not partition): ' grub_disk
+  grub-install --target=i386-pc $grub_disk
+else
+  # Install grub [UEFI]
+  pacman -Suy --noconfirm grub efibootmgr
+  echo ''
+  lsblk
+  read -p $'\nEnter EFI partition: ' efi_part
+  mkdir /boot/EFI
+  mount $efi_part /boot/EFI 
+  grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB
+  sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
+fi
+
+read -p $'\nInstall AMD or Intel microcode packages? [a/i/N] ' ucode_ans
+if [[ $ucode_ans = a ]] ; then
+  pacman -Suy --noconfirm amd-ucode
+elif [[ $ucode_ans = i ]] ; then
+  pacman -Suy --noconfirm intel-ucode
+fi
 grub-mkconfig -o /boot/grub/grub.cfg
 
 read -p $'\nInstall virtualbox-guest-utils? [y/N] ' vm_ans
@@ -48,7 +65,7 @@ pacman -Suy --noconfirm networkmanager neovim man-db wget git doas htop openssh 
         xorg picom `# window system` \
         rofi `# launcher` \
         feh `# wallpaper` \
-        kitty ttf-fira-code `# term` \
+        kitty `# term` \
         zip unzip unrar p7zip gzip bzip2 `# archivers` \
         lightdm lightdm-gtk-greeter `# desktop manager` \
         neofetch figlet lolcat zathura tldr `# extras` \
