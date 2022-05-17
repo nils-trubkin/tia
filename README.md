@@ -29,7 +29,7 @@ chmod +x a.sh
 | ❔ help           |` man-db                `|` tldr  exa                                    `|
 | ⤵ download        |` wget                  `|` git rankmirrors-systemd                      `|
 | 🔑 ssh            |` openssh               `|                                                |
-| 🍚 rice           |` neofetch              `|` pfetch   lolcat                              `|
+| 🍚 rice           |` neofetch              `|` pfetch figlet lolcat                         `|
 | 📚 archivers      |` unzip zip unrar       `|` p7zip gzip bzip2                             `|
 | 🖼 images          |` feh                   `|` imagemagick                                  `|
 | 🔣 languages      |` gcc python python-pip `|` ghc go                                       `|
