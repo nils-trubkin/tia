@@ -19,7 +19,7 @@ chmod +x a.sh
 | ⚙ window system   |` xorg                  `|` picom                                        `|
 | 🪟 window manager |` xmonad-git            `|` xmonad-contrib-git xmobar-git                `|
 | ▶ launcher        |` rofi                  `|                                                |
-| 🐚 shell          |` zsh                   `|` dash zsh-theme-powerlevel10k-git zsh-vi-mode `|
+| 🐚 shell          |` zsh dash              `|` zsh-theme-powerlevel10k-git zsh-vi-mode      `|
 | 📄 editor         |` neovim                `|` vim-plug                                     `|
 | 🌐 browser        |` brave-beta-bin        `|                                                |
 | 🖥 terminal        |` kitty                 `|                                                |
