@@ -23,7 +23,7 @@ chmod +x a.sh
 | 📄 editor         |` neovim                `|` vim-plug                                     `|
 | 🌐 browser        |` brave-beta-bin        `|                                                |
 | 🖥 terminal        |` kitty                 `|                                                |
-| 🔡 font           |` ttf-fira-code         `|                                                |
+| 🔡 font           |` nerd-fonts-complete   `|                                                |
 | 📦 AUR            |` aura                  `|`  yay                                         `|
 | 🗄 network         |` networkmanager        `|                                                |
 | ❔ help           |` man-db                `|` tldr  exa                                    `|
