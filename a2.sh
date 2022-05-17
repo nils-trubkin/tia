@@ -46,7 +46,6 @@ pacman -Suy --noconfirm networkmanager neovim man-db wget git doas htop openssh 
         zsh dash `# shells` \
         neovim `# editor` \
         xorg picom `# window system` \
-        xmobar `# window manager` \
         rofi `# launcher` \
         feh `# wallpaper` \
         kitty ttf-fira-code `# term` \
