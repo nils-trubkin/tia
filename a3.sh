@@ -45,7 +45,7 @@ if [[ $nas_ans = y ]] ; then
       git clone --separate-git-dir=$HOME/.dot git@github.com:nils-trubkin/dot.git $HOME/dot-tmp
       #cp ~/myconf-tmp/.gitmodules ~  # If you use Git submodules
       rm -r ~/dot-tmp/
-      git --git-dir=$HOME/dot/ --work-tree=$HOME restore .
+      git --git-dir=$HOME/.dot/ --work-tree=$HOME restore .
       read -p $'\nReboot? [y/N] ' rb_ans
       if [[ $rb_ans = y ]] ; then
         systemctl reboot
