@@ -11,8 +11,9 @@ makepkg -s
 doas pacman --noconfirm -U aura-bin-*
 
 # Install AUR packages
+doas yay -Rcns xmonad
 sudo aura -A --noconfirm xmonad-git xmonad-contrib-git xmobar-git zsh-theme-powerlevel10k-git zsh-vi-mode brave-beta-bin pfetch rankmirrors-systemd yay
-yay -Suy --noconfirm nerd-fonts-complete
+doas yay -Suy --noconfirm nerd-fonts-complete
 
 read -p $'\nConnect NAS? [y/N] ' nas_ans
 if [[ $nas_ans = y ]] ; then
