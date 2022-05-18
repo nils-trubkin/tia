@@ -45,6 +45,8 @@ if [[ $nas_ans = y ]] ; then
       #cp ~/myconf-tmp/.gitmodules ~  # If you use Git submodules
       rm -r ~/dot-tmp/
       git --git-dir=$HOME/.dot/ --work-tree=$HOME restore .
+      git --git-dir=$HOME/.dot/ --work-tree=$HOME config --local status.showUntrackedFiles no
+      git --git-dir=$HOME/.dot/ --work-tree=$HOME config --local core.bare true
       read -p $'\nReboot? [y/N] ' rb_ans
       if [[ $rb_ans = y ]] ; then
         systemctl reboot
