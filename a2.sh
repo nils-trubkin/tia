@@ -42,8 +42,8 @@ else
   mkdir /boot/EFI
   mount $efi_part /boot/EFI 
   grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB
-  sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 fi
+sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 
 read -p $'\nInstall AMD or Intel microcode packages? [a/i/N] ' ucode_ans
 if [[ $ucode_ans = a ]] ; then
