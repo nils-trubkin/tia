@@ -11,6 +11,8 @@ makepkg -s
 doas pacman --noconfirm -U aura-bin-*
 
 # Install AUR packages
+# lens is dep of xmobar-git
+sudo aura -A --noconfirm lens
 sudo aura -A --noconfirm xmonad-git xmonad-contrib-git xmobar-git zsh-theme-powerlevel10k-git zsh-vi-mode brave-beta-bin pfetch rankmirrors-systemd yay
 yay -Suy --noconfirm nerd-fonts-complete
 
