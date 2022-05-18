@@ -11,8 +11,9 @@ makepkg -s
 doas pacman --noconfirm -U aura-bin-*
 
 # Install AUR packages
+# temorary removed: xmobar-git
 doas pacman --noconfirm -Rcns xmonad
-sudo aura -A --noconfirm xmonad-git xmonad-contrib-git xmobar-git zsh-theme-powerlevel10k-git zsh-vi-mode brave-beta-bin pfetch rankmirrors-systemd yay
+sudo aura -A --noconfirm xmonad-git xmonad-contrib-git zsh-theme-powerlevel10k-git zsh-vi-mode brave-beta-bin pfetch rankmirrors-systemd yay
 yay -Suy --noconfirm nerd-fonts-complete
 
 read -p $'\nConnect NAS? [y/N] ' nas_ans
