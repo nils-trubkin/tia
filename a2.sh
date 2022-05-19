@@ -61,6 +61,10 @@ fi
 read -p $'\nInstall wifi stuff? [y/N] ' wifi_ans
 if [[ $wifi_ans = y ]] ; then
   pacman -Suy --noconfirm netcat macchanger nmap aircrack-ng reaver
+  read -p $'\nInstall laptop stuff? [y/N] ' lt_ans
+  if [[ $lt_ans = y ]] ; then
+    pacman -Suy --noconfirm brightnessctl
+  fi
 fi
 
 # Install programs
