@@ -58,6 +58,11 @@ if [[ $vm_ans = y ]] ; then
   pacman -Suy --noconfirm virtualbox-guest-utils
 fi
 
+read -p $'\nInstall wifi stuff? [y/N] ' wifi_ans
+if [[ $wifi_ans = y ]] ; then
+  pacman -Suy --noconfirm netcat macchanger nmap aircrack-ng reaver
+fi
+
 # Install programs
 pacman -Suy --noconfirm networkmanager neovim man-db wget git doas htop openssh exa `# basics` \
         zsh dash `# shells` \
@@ -69,7 +74,7 @@ pacman -Suy --noconfirm networkmanager neovim man-db wget git doas htop openssh 
         kitty `# term` \
         zip unzip unrar p7zip gzip bzip2 `# archivers` \
         lightdm lightdm-gtk-greeter `# desktop manager` \
-        neofetch figlet lolcat zathura tldr `# extras` \
+        neofetch figlet lolcat zathura tldr redshift `# extras` \
         ghc python python-pip gcc `# languages` \
         imagemagick `# dep of icat kitten in kitty` \
         go `# dep of vim-hexokinase` \
