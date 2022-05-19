@@ -74,9 +74,9 @@ pacman -Suy --noconfirm networkmanager neovim man-db wget git doas htop openssh 
         imagemagick `# dep of icat kitten in kitty` \
         go `# dep of vim-hexokinase` \
 
-# Install dash
-rm /bin/sh
-ln -s dash /bin/sh
+# Install dash (breaks haskell-lens registration script, dep of haskell-dbus, dep of xmobar-git)
+#rm /bin/sh
+#ln -s dash /bin/sh
 
 # Enable services for network and VM
 systemctl enable NetworkManager.service
