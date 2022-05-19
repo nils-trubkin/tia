@@ -8,12 +8,17 @@
 git clone https://aur.archlinux.org/aura-bin.git
 cd aura-bin
 makepkg -s
-doas pacman --noconfirm -U aura-bin-*
+sudo pacman --noconfirm -U aura-bin-*
 
 # Install AUR packages
-doas pacman --noconfirm -Rcns xmonad
-sudo aura -A --noconfirm xmonad-git xmonad-contrib-git xmobar-git zsh-theme-powerlevel10k-git zsh-vi-mode brave-beta-bin pfetch rankmirrors-systemd yay
+sudo pacman --noconfirm -Rcns xmonad
+sudo aura -A --noconfirm xmonad-git xmonad-contrib-git xmobar-git zsh-theme-powerlevel10k-git zsh-vi-mode brave-beta-bin pfetch rankmirrors-systemd yay nordvpn-bin
 yay -Suy --noconfirm nerd-fonts-complete
+
+# Set up nordvpn
+sudo systemctl enable --now nordvpnd
+sudo gpasswd -a $USER nordvpn
+echo 'Restart to finalize nordvpn setup'
 
 read -p $'\nConnect NAS? [y/N] ' nas_ans
 if [[ $nas_ans = y ]] ; then
