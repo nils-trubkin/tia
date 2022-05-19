@@ -24,12 +24,13 @@ chmod +x a.sh
 | 🌐 browser        |` brave-beta-bin        `|                                                |
 | 🖥 terminal        |` kitty                 `|                                                |
 | 🔡 font           |` nerd-fonts-complete   `|                                                |
-| 📦 AUR            |` aura                  `|`  yay                                         `|
-| 🗄 network         |` networkmanager        `|                                                |
-| ❔ help           |` man-db                `|` tldr  exa                                    `|
+| 📦 AUR            |` aura                  `|` yay                                          `|
+| 🗄 network         |` networkmanager        `|` nordvpn-bin (netcat)                         `|
+| 📑 reader         |` zathura               `|                                                |
+| ❔ help           |` man-db                `|` tldr exa                                     `|
 | ⤵ download        |` wget                  `|` git rankmirrors-systemd                      `|
 | 🔑 ssh            |` openssh               `|                                                |
-| 🍚 rice           |` neofetch              `|` pfetch figlet lolcat                         `|
+| 🍚 rice           |` neofetch              `|` pfetch figlet lolcat redshift                `|
 | 📚 archivers      |` unzip zip unrar       `|` p7zip gzip bzip2                             `|
 | 🖼 images          |` feh                   `|` imagemagick                                  `|
 | 🔣 languages      |` gcc python python-pip `|` ghc go                                       `|
