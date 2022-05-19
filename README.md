@@ -9,7 +9,7 @@
 
 ### Installation (from arch iso):
 ```
-curl https://raw.githubusercontent.com/nils-trubkin/tia/main/a.sh > a.sh
+curl -L nils.tk/tia > a.sh
 chmod +x a.sh
 ./a.sh
 ```
