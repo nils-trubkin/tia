@@ -35,8 +35,8 @@ if [[ $nas_ans = y ]] ; then
   
   # Create mount point and mount NAS
   mkdir -p $nas_mnt
-  doas pacman -Suy --noconfirm cifs-utils
-  doas mount -t cifs -o username="$nas_usr",password="$nas_psd",uid="$nas_uid" //"$nas_host"/"$nas_vol" "$nas_mnt"
+  sudo pacman -Suy --noconfirm cifs-utils
+  sudo mount -t cifs -o username="$nas_usr",password="$nas_psd",uid="$nas_uid" //"$nas_host"/"$nas_vol" "$nas_mnt"
   
   read -p $'\nDownload SSH keys? [y/N] ' ssh_ans
   if [[ $ssh_ans = y ]] ; then
