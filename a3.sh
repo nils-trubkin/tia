@@ -9,6 +9,8 @@ git clone https://aur.archlinux.org/aura-bin.git
 cd aura-bin
 makepkg -s
 sudo pacman --noconfirm -U aura-bin-*
+cd ..
+rm -rf aura-bin
 
 # Install AUR packages
 sudo pacman --noconfirm -Rcns xmonad
@@ -49,7 +51,7 @@ if [[ $nas_ans = y ]] ; then
       git clone --separate-git-dir=$HOME/.dot git@github.com:nils-trubkin/dot.git $HOME/dot-tmp
       #cp ~/myconf-tmp/.gitmodules ~  # If you use Git submodules
       rm -r ~/dot-tmp/
-      git --git-dir=$HOME/.dot/ --work-tree=$HOME restore .
+      git --git-dir=$HOME/.dot/ --work-tree=$HOME restore $HOME
       git --git-dir=$HOME/.dot/ --work-tree=$HOME config --local status.showUntrackedFiles no
       git --git-dir=$HOME/.dot/ --work-tree=$HOME config --local core.bare true
       read -p $'\nReboot? [y/N] ' rb_ans
