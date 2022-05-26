@@ -64,6 +64,8 @@ if [[ $wifi_ans = y ]] ; then
   read -p $'\nInstall laptop stuff? [y/N] ' lt_ans
   if [[ $lt_ans = y ]] ; then
     pacman -Suy --noconfirm brightnessctl
+    curl https://raw.githubusercontent.com/nils-trubkin/tia/main/20_custom-ehci_hcd > /etc/pm/sleep.d/20_custom-ehci_hcd
+    chmod +x /etc/pm/sleep.d/20_custom-ehci_hcd
   fi
 fi
 
