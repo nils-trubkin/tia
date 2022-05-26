@@ -118,6 +118,8 @@ if [[ $vm_ans = y ]] ; then
 fi
 chown $username:$username .zshrc
 
+# TODO enable greeter https://github.com/Litarvan/lightdm-webkit-theme-litarvan
+
 # Download the 'a3' and allow $username to execute it
 wget https://raw.githubusercontent.com/nils-trubkin/tia/main/a3.sh
 chown $username:$username a3.sh
