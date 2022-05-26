@@ -120,7 +120,9 @@ if [[ $vm_ans = y ]] ; then
 fi
 chown $username:$username .zshrc
 
-# TODO enable greeter https://github.com/Litarvan/lightdm-webkit-theme-litarvan
+# Enable lightdm-webkit-theme-litarvan
+sed -i "s/^#greeter-session=example-gtk-gnome$/greeter-session=lightdm-webkit2-greeter/" /etc/lightdm/lightdm.conf
+sed -i "s/^webkit_theme        = antergos$/webkit_theme        = litarvan/" /etc/lightdm/lightdm-webkit2-greeter.conf
 
 # Download the 'a3' and allow $username to execute it
 wget https://raw.githubusercontent.com/nils-trubkin/tia/main/a3.sh
