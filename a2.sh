@@ -73,6 +73,7 @@ pacman -Suy --noconfirm networkmanager neovim man-db wget git doas htop openssh 
         neovim `# editor` \
         xorg picom `# window system` \
         xmonad `# window manager ` \
+        lightdm-webkit2-greeter lightdm-webkit-theme-litarvan light-locker `# greeter ` \
         rofi `# launcher` \
         feh `# wallpaper` \
         kitty `# term` \
