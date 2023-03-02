@@ -25,8 +25,9 @@ timedatectl set-ntp true
 
 # select drive
 lsblk
-echo -n $'\nEnter the drive: '
+echo -n $'\nEnter the drive (/dev/sda): '
 read drv
+drv=${drv:-/dev/sda} # set default value if empty
 cfdisk $drv
 clear
 
