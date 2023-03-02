@@ -14,7 +14,7 @@ rm -rf aura-bin
 
 # Install AUR packages
 sudo pacman --noconfirm -Rcns xmonad
-sudo aura -A --noconfirm xmonad-git xmonad-contrib-git xmobar-git zsh-theme-powerlevel10k-git zsh-vi-mode brave-beta-bin pfetch rankmirrors-systemd yay nordvpn-bin
+sudo aura -A --noconfirm xmonad-git xmonad-contrib-git xmobar-git zsh-theme-powerlevel10k-git zsh-vi-mode brave-beta-bin pfetch rankmirrors-systemd yay
 yay -Suy --noconfirm nerd-fonts-complete
 
 # Set up nordvpn
