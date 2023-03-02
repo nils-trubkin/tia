@@ -17,11 +17,6 @@ sudo pacman --noconfirm -Rcns xmonad
 sudo aura -A --noconfirm xmonad-git xmonad-contrib-git xmobar-git zsh-theme-powerlevel10k-git zsh-vi-mode brave-beta-bin pfetch rankmirrors-systemd yay
 yay -Suy --noconfirm nerd-fonts-complete
 
-# Set up nordvpn
-sudo systemctl enable --now nordvpnd
-sudo gpasswd -a $USER nordvpn
-echo 'Restart to finalize nordvpn setup'
-
 read -p $'\nConnect NAS? [y/N] ' nas_ans
 if [[ $nas_ans = y ]] ; then
   read -p 'hostname: ' nas_host
