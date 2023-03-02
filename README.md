@@ -25,7 +25,7 @@ chmod +x a.sh
 | 🖥 terminal        |` kitty                 `|                                                |
 | 🔡 font           |` nerd-fonts-complete   `|                                                |
 | 📦 AUR            |` aura                  `|` yay                                          `|
-| 🗄 network         |` networkmanager        `|` nordvpn-bin (netcat)                         `|
+| 🗄 network         |` networkmanager        `|` netcat                                       `|
 | 📑 reader         |` zathura               `|                                                |
 | ❔ help           |` man-db                `|` tldr exa                                     `|
 | ⤵ download        |` wget                  `|` git rankmirrors-systemd                      `|
